@@ -10,9 +10,15 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/login',
+      name: 'loginPage',
+      component: () => import('@/views/login/loginView.vue')
+    },
+    {
       path: '/main',
       name: 'mainPage',
-      component: () => import('@/views/lateralMenu/lateralMenu.vue'),
+      component: () => import('@/views/home/home.vue'),
+      meta:{requiresAuth: true}
     },
     {
       path: '/about',
@@ -23,6 +29,15 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     }
   ]
+})
+
+router.beforeEach((to) => {
+  const requiresAuth = to.meta.requiresAuth
+  const isAuthenticated = true
+  if (requiresAuth && !isAuthenticated) {
+    return { name: 'loginPage' }
+  }
+  return true
 })
 
 export default router

@@ -1,10 +1,8 @@
 <script setup>
-    import Login from '@/components/app/loginView.vue'
+import Login from '@/components/app/formLogin.vue'
 </script>
 <template>
-    <main>
-        <Login />
-    </main>
+    <Login />
 </template>
 <!-- <style>
     @import '@/assets/css/style_login.css';

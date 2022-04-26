@@ -1,24 +1,28 @@
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script >
-        const menuToggle = document.querySelector('.menuToggle')
-        const navigation = document.querySelector('.navigation')
+<script setup>
+import { onMounted } from "vue";
+function sideBarEffect() {
+    const menuToggle = document.querySelector('.menuToggle')
+    const navigation = document.querySelector('.navigation')
 
-        menuToggle.onclick = function(){
-            navigation.classList.toggle('open')
-        }
+    menuToggle.onclick = function(){
+        navigation.classList.toggle('open')
+    }
 
-        const list = document.querySelectorAll('.list');
-        function activeLink(){
-            list.forEach((item) => 
-                item.classList.remove('active')
-            );
-                this.classList.add('active');
-        }
-
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
         list.forEach((item) => 
-            item.addEventListener('click', activeLink)
-        )
+            item.classList.remove('active')
+        );
+            this.classList.add('active');
+    }
+
+    list.forEach((item) => 
+        item.addEventListener('click', activeLink)
+    )
+}
+onMounted(() => {
+    sideBarEffect()
+})
 </script>
 
 <template>
@@ -76,7 +80,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     @import '@/assets/css/style_menuLateral.css';
 </style>
 

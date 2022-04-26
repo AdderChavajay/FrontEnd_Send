@@ -34,6 +34,6 @@
     </section>
 </template>
 
-<style>
+<style scoped>
     @import '@/assets/css/style_login.css';
 </style>
