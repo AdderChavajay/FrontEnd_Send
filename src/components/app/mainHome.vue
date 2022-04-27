@@ -1,6 +1,5 @@
-
 <template>
-        <section>
+        <section class="main">
             <div>
                 <h1>
                     Hola Mundo
@@ -20,3 +19,7 @@
             </div>
         </section>
 </template>
+
+<style scoped>
+@import '@/assets/css/style_main.css';
+</style>

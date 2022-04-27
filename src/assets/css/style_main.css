@@ -1,6 +1,5 @@
-main{
+.main{
     width: 90%;
-    /* max-width: 1000px; */
     margin: 0 auto;
     background: var(--color_icons);
     transform: translateX(30px) translateY(10px);
@@ -8,10 +7,9 @@ main{
 }
 
 @media screen and (max-width: 1000px) {
-    main{
+    .main{
         transform: translateX(40px) translateY(10px);
         width: 80%;
-        /* max-width: 300px; */
     }
     .navigation ul {
        transform: translateY(40px);
@@ -19,7 +17,7 @@ main{
 }
 
 @media screen and (max-width: 580px){
-    main{
+    .main{
         transform: translateX(45px) translateY(10px);
         width: 80%;
         
@@ -27,14 +25,14 @@ main{
 }
 
 @media screen and (max-width: 500px){
-    main{
+    .main{
         transform: translateX(45px) translateY(10px);
         width: 75%;   
     }
 }
 
 @media screen and (max-width: 525px){
-    main{
+    .main{
         transform: translateX(45px) translateY(10px);
         width: 70%;   
     }

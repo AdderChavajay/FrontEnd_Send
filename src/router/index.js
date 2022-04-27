@@ -7,7 +7,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      // meta:{requiresAuth: true}
     },
     {
       path: '/login',
@@ -18,6 +19,18 @@ const router = createRouter({
       path: '/main',
       name: 'mainPage',
       component: () => import('@/views/home/home.vue'),
+      meta:{requiresAuth: true}
+    },
+    {
+      path: '/createUser',
+      name: 'createUserPage',
+      component: () => import('@/views/createUser/createUser.vue'),
+      meta:{requiresAuth: true}
+    },
+    {
+      path: '/profile',
+      name: 'profilePage',
+      component: () => import('@/views/profile/profileView.vue'),
       meta:{requiresAuth: true}
     },
     {

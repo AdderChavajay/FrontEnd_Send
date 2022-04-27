@@ -54,9 +54,9 @@ onMounted(() => {
             <li class="list " style="--crl: #5dade2">
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="code-working-outline"></ion-icon>
+                        <ion-icon name="send-outline"></ion-icon>
                     </span>
-                    <span class="text">Services</span>
+                    <span class="text">Enviados</span>
                 </a>
             </li>
             <li class="list " style="--crl: #c0392b">
@@ -64,7 +64,7 @@ onMounted(() => {
                     <span class="icon">
                         <ion-icon name="settings-outline"></ion-icon>
                     </span>
-                    <span class="text">Settings</span>
+                    <span class="text">Estados</span>
                 </a>
             </li>
             <li class="list " style="--crl: #d4ac0d">

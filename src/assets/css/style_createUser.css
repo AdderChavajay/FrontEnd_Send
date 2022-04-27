@@ -1,7 +1,7 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-.login{
+.ContainerCreateUser{
     height: 90vh;
     width: 100%;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 
-.login::before{
+.ContainerCreateUser::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -22,30 +22,31 @@
     
 }
 
-.container{
+.ContainerCreateUser > .formCreateUser{
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     padding: 20px;
     box-shadow: 0px 0px 5px 1px  #5f6a6a;
     z-index: 1;
 }
 
-.container div > form .email, .password, .forgot_pass, .aceptar{
-    padding: 5px 0px;
+.ContainerCreateUser .formCreateUser form 
+.names, .lastNames, 
+.email, .password,
+.codigWork, .nameDepartament{
+    padding: 0px 0px 20px 0px;
 }
-.container div p{
+.ContainerCreateUser .formCreateUser p{
     font-size: 20px;
 }
 
-.container div form div fieldset {
-    padding: 2px;
+.ContainerCreateUser .formCreateUser form div fieldset {
+    padding: 1px;
     border-radius: 5px;
-    border: 1px solid  #d5d8dc ;
 }
 
-.container div form div fieldset input{
-    width: 95%;
-    margin: auto;
+.ContainerCreateUser .formCreateUser form div fieldset input{
+    width: 100%;
     border: none ;
     background: none;
     border-radius: 5px;
@@ -53,17 +54,17 @@
     outline: 0px ;
 }
 
-.container div form .forgot_pass{
+.ContainerCreateUser .formCreateUser form .forgot_pass{
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-.container div form .btn_aceptar{
+.ContainerCreateUser .formCreateUser form .btn_aceptar{
     display: flex;
     justify-content: center;
 }
 
-.container div form .btn_aceptar button{
+.ContainerCreateUser .formCreateUser form .btn_aceptar button{
     width: 90%;
     padding: 10px;
     background:  #3498db ;
@@ -73,10 +74,9 @@
     color: #fff;
 }
 
-.container div form .btn_aceptar button:hover{
+.ContainerCreateUser div form .btn_aceptar button:hover{
     background: #5dade2;
-    ;
 }
-.container div form .btn_aceptar button:active{
+.ContainerCreateUser div form .btn_aceptar button:active{
     background:  #2874a6 ;
 }
