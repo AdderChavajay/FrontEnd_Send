@@ -53,12 +53,12 @@ onMounted(() => {
                 </RouterLink>
             </li>
             <li class="list " style="--crl: #5dade2">
-                <a href="#">
+                <RouterLink to="/register">
                     <span class="icon">
                         <ion-icon name="send-outline"></ion-icon>
                     </span>
                     <span class="text">Enviados</span>
-                </a>
+                </RouterLink>
             </li>
             <li class="list " style="--crl: #c0392b">
                 <a href="#">
