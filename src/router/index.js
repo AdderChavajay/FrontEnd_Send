@@ -34,6 +34,11 @@ const router = createRouter({
       meta:{requiresAuth: true}
     },
     {
+      path: '/register',
+      name: 'registerPage',
+      component: () => import('@/views/table/tableView.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

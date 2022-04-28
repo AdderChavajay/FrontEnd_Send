@@ -1,9 +1,11 @@
 .main{
     width: 90%;
     margin: 0 auto;
-    background: var(--color_icons);
+    /* background: var(--color_icons); */
     transform: translateX(30px) translateY(10px);
     border-radius: 5px;
+    box-shadow: 0px 1px 10px 1px #000;
+    padding: 10px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -38,3 +40,23 @@
     }
 }
 
+.typeDocument{
+    position: relative;
+    font-family: Arial;
+}
+/* .typeDocument select {
+    display: none; 
+} */
+  
+.main .button{
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.main div button{
+    padding: 10px;
+    background:  #5dade2;
+    border: none;
+    border-radius: 5px;
+}
