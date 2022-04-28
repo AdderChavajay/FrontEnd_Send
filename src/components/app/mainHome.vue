@@ -34,6 +34,12 @@ onMounted(() => {
                 <option>Memorandum</option>
                 <option>Ciculares</option>
             </select>
+
+            <select name="sendPeople">
+                <option>Enviar a</option>
+                <option>Jefe</option>
+                <option>Jefes de cada Area</option>
+            </select>
         </section>
 
         <ckeditor :editor="ClassicEditor" v-model="editorData" :config="editorConfig"></ckeditor>
