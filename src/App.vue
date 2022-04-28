@@ -38,7 +38,7 @@ import ckeditor from '@ckeditor/ckeditor5-vue';
 <style>
 @import '@/assets/css/style_header.css';
 @import '@/assets/css/normalize/normalize.css';
-@import '@/assets/css/root.css'
+@import '@/assets/css/root.css';
 /* @import '@/assets/base.css'; */
 
 </style>

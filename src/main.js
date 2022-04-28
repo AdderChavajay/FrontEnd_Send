@@ -5,8 +5,8 @@ import CKEditor from '@ckeditor/ckeditor5-vue'
 
 const app = createApp(App)
 
-app.use(router, CKEditor)
+app.use(router)
 
-// app.use()
+app.use(CKEditor)
 
 app.mount('#app')

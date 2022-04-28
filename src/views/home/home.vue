@@ -1,7 +1,7 @@
 <script setup>
-import MainHomeDD from '@/components/app/mainHome.vue'
+import MainHome from '@/components/app/mainHome.vue'
 </script>
 
 <template>
-    <MainHomeDD />
+    <MainHome />
 </template>

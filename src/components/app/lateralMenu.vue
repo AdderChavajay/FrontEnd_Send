@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import { onMounted } from "vue";
 function sideBarEffect() {
     const menuToggle = document.querySelector('.menuToggle')
@@ -35,21 +36,21 @@ onMounted(() => {
         <ul>
             <!-- Perfil  -->
             <li class="list perfil">
-                <a href="#">
+                <RouterLink to="/profile">
                     <span class="icon">
                         <img src="fotos/foto.jpg" width="45px" alt="">
                     </span>
                     <span class="text">Perfil</span>
-                </a>
+                </RouterLink>
             </li>
 
             <li class="list active" style="--crl: #239b56">
-                <a href="#">
+                <RouterLink to="/main">
                     <span class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                     </span>
                     <span class="text">Home</span>
-                </a>
+                </RouterLink>
             </li>
             <li class="list " style="--crl: #5dade2">
                 <a href="#">
