@@ -61,12 +61,12 @@ onMounted(() => {
                 </RouterLink>
             </li>
             <li class="list " style="--crl: #c0392b">
-                <a href="#">
+                <RouterLink to="/createUser">
                     <span class="icon">
-                        <ion-icon name="settings-outline"></ion-icon>
+                        <ion-icon name="people-outline"></ion-icon>
                     </span>
-                    <span class="text">Estados</span>
-                </a>
+                    <span class="text">Crear Usuario</span>
+                </RouterLink>
             </li>
             <li class="list " style="--crl: #d4ac0d">
                 <a href="#">

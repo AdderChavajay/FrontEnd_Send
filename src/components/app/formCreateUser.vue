@@ -50,6 +50,13 @@
                         placeholder="Password">
                     </fieldset>
                 </div>
+                <div class="confirPassword">
+                    <fieldset>
+                        <legend>Confimar Contraseña</legend>
+                        <input type="password" name="password" id="password" 
+                        placeholder="Repit your Password">
+                    </fieldset>
+                </div>
                 <hr>
                 <div class="btn_aceptar">
                     <button type="submit">Aceptar</button>
