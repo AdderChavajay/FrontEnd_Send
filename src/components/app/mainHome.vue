@@ -2,15 +2,16 @@
 import { onMounted, ref } from "vue";
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 const editorData = ref('')
+const nameDocument= ref('')
 const editorConfig = {}
 
+function saveDocumentContent() {
 
-function saveDocumentContetn() {
     try {
-        // axios.post('/save/content', {
-        //     content: editorData.value,
-        //     title: 'titulo'
-        // })
+        axios.post('http://localhost:80/api/document', {
+            content: editorData.value,
+            name: nameDocument.value,
+        })
         console.log('content ', editorData.value);
     } catch (error) {
         console.error(error);
@@ -19,9 +20,6 @@ function saveDocumentContetn() {
 onMounted(() => {
     // const { contenido } = axios.get('/get-doc-content')
     // editorData.value = contenido
-    setTimeout(() => {
-        editorData.value = '<h3>Este es un subtitulo que viene del servidor</h3><p><strong>Bold</strong></p>'
-    }, 1000 * 3);
 })
 </script>
 
@@ -40,12 +38,12 @@ onMounted(() => {
                 <option>Jefe</option>
                 <option>Jefes de cada Area</option>
             </select>
+        <input type="text" placeholder="nameDocument" v-model="name">    
         </section>
-
         <ckeditor :editor="ClassicEditor" v-model="editorData" :config="editorConfig"></ckeditor>
-            <div class="button">
-                <button @click="saveDocumentContetn">Enviar</button>
-            </div>
+        <div class="button">
+            <button @click="saveDocumentContent">Enviar</button>
+        </div>
         </section>
 </template>
 
