@@ -1,12 +1,14 @@
 <script setup>
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 const succesCreadoDoc = ref(false)
 const creatingDoc = ref(false)
 const nameDoc = ref('')
 const errorCreateDoc = ref(null)
 const documents = ref([])
+const $router = useRouter()
 
 async function createNewDoc() {
     try {
@@ -35,10 +37,13 @@ async function getFullListDocs () {
         creatingDoc.value = false
     }
 }
-
 onMounted(() => {
     getFullListDocs()
 })
+
+function goToFullDocument(docId) {
+    $router.push(`/main/${docId}`)
+}
 </script>
 
 <template>
@@ -89,7 +94,7 @@ onMounted(() => {
                         <td>{{ doc.state }}</td>
                         <td>{{ doc.created_at }}</td>
                         <td>
-                            <button>
+                            <button @click.prevent="goToFullDocument(doc.id)">
                                 Editar
                             </button>
                         </td>

@@ -16,7 +16,7 @@ const router = createRouter({
       component: () => import('@/views/login/loginView.vue')
     },
     {
-      path: '/main',
+      path: '/main/:docId?',
       name: 'mainPage',
       component: () => import('@/views/home/home.vue'),
       meta:{requiresAuth: true}
