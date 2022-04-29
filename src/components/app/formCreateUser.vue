@@ -21,18 +21,18 @@
                         placeholder="Escriba los apellidos" >
                     </fieldset>
                 </div>
-                <div class="nameDepartament">
-                    <fieldset>
-                        <legend>Nombre del Departamento</legend>
-                        <input type="text" name="nameDepartament" id="nameDepartament" 
-                        placeholder="Nombre de Departamento de Area">
-                    </fieldset>
-                </div>
                 <div class="codigWork">
                     <fieldset>
                         <legend>Codigo de Trabajo de Area</legend>
                         <input type="text" name="email" id="email" 
                         placeholder="Codigo de Trabajo de Area">
+                    </fieldset>
+                </div>
+                <div class="nameDepartament">
+                    <fieldset>
+                        <legend>Nombre del Departamento</legend>
+                        <input type="text" name="nameDepartament" id="nameDepartament" 
+                        placeholder="Nombre de Departamento de Area">
                     </fieldset>
                 </div>
                 
