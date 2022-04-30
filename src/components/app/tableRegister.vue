@@ -51,20 +51,23 @@ function goToFullDocument(docId) {
         
         <div>
             <form @submit.prevent>
-                <input type="text" placeholder="Nombre documento" v-model="nameDoc">
+                <fieldset>
+                    <legend>Nombre del Documento </legend>
+                        <input type="text" placeholder="Nombre documento" v-model="nameDoc">
+                </fieldset>
             </form>
         </div>
-        <div>
+        <div class="button">
             <button @click="createNewDoc">Crear documento</button>
         </div>
 
-        <div v-if="succesCreadoDoc" style="background-color: green; color: white;">
+        <div class="msj" v-if="succesCreadoDoc" style="background-color: green; color: white;">
             El documento fue creado
         </div>
-        <div v-if="creatingDoc">
+        <div class="msj" v-if="creatingDoc">
             En espera...
         </div>
-        <div v-if="errorCreateDoc">
+        <div class="msj-error" v-if="errorCreateDoc">
             Error create doc
             <pre>
                 {{ errorCreateDoc }}

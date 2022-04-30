@@ -8,7 +8,7 @@ const email = ref('')
 const password = ref('')
 const nameDepartament = ref('')
 const confirmPassword = ref('') 
-const codeWork = ref('')
+const posiotion = ref('')
 
 async function register(){
     await axios.post('http://localhost:80/api/createUser',{
@@ -18,7 +18,7 @@ async function register(){
         password: password.value,
         nameDepartament: nameDepartament.value,
         password_confirmation: confirmPassword.value,
-        codeWork: codeWork.value,
+        codeWork: posiotion.value,
 
     });
     router.replace('/login')
@@ -48,11 +48,11 @@ async function register(){
                         placeholder="Escriba los apellidos" >
                     </fieldset>
                 </div>
-                <div class="codegWork">
+                <div class="Posiotion">
                     <fieldset>
-                        <legend>Codigo de Trabajo de Area</legend>
-                        <input type="text" name="codegWork" id="email" v-model="codeWork"
-                        placeholder="Codigo de Trabajo de Area">
+                        <legend>Position</legend>
+                        <input type="text" name="codegWork" id="email" v-model="posiotion"
+                        placeholder="Posicion de Trabajo">
                     </fieldset>
                 </div>
                 <div class="nameDepartament">
